@@ -18,16 +18,18 @@ public class ScoreLabel : MonoBehaviour {
 
 	private float temp;
 
-	public int texturedimension;
-	public int locationx;
-	public int locationy;
+	private int texturedimension;
+	private int locationx;
+	private int locationy;
 	private string scoreText; 
 	// Use this for initialization
 	void Start () {
 		temp = 0;
 		texturedimension = 60;
-		locationx = 800;
-		locationy = 40;
+		Vector3 scoretitle_pos = GameObject.Find ("ScoreTitle").transform.position;
+		locationx = (int)scoretitle_pos.x + 150;
+		locationy = Screen.height - (int)scoretitle_pos.y;
+		Debug.Log (locationx.ToString() + "," + locationy.ToString());
 	}
 	
 	// Update is called once per frame
