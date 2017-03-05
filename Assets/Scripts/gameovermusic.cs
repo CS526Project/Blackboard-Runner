@@ -30,8 +30,11 @@ public class gameovermusic : MonoBehaviour {
 		gameovermusicfile.Play ();
 
 		texturedimension = 75;
-		locationx = 510;
-		locationy = 360;
+		Vector3 scoretitle_pos = GameObject.Find ("your_score").transform.position;
+		locationx = (int)scoretitle_pos.x + 220;
+		locationy = (int)scoretitle_pos.y;
+		//locationx = 510;
+		//locationy = 360;
 		myStringScore = ScoreLabel.score.ToString();
 	}
 
