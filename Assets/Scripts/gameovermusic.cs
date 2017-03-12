@@ -29,10 +29,10 @@ public class gameovermusic : MonoBehaviour {
 		gameovermusicfile.clip = ggbackground;
 		gameovermusicfile.Play ();
 
-		texturedimension = 75;
-		Vector3 scoretitle_pos = GameObject.Find ("your_score").transform.position;
-		locationx = (int)scoretitle_pos.x + 220;
-		locationy = (int)scoretitle_pos.y;
+		texturedimension = 60;
+		RectTransform scoretitle_trans = (RectTransform) GameObject.Find ("your_score").transform;
+		locationx = (int)(scoretitle_trans.position.x + scoretitle_trans.rect.width + 150);
+		locationy = (int)(scoretitle_trans.position.y - 20);
 		//locationx = 510;
 		//locationy = 360;
 		myStringScore = ScoreLabel.score.ToString();
